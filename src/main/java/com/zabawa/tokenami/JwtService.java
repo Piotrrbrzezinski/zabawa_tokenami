@@ -20,7 +20,7 @@ public class JwtService {
                 .issuedAt(now)
                 .expiresAt(now.plusSeconds(3600)) // Token ważny przez 1 godzinę
                 .subject(username)
-                .claim("role", "USER")
+                .claim("roles", "ADMIN")
                 .claim("ppp","qq1")
                 .build();
 
